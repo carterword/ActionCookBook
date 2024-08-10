@@ -29,9 +29,7 @@ jobs:
     steps:
       - run: |
           echo "Hello World from ${{ vars.WHO_TO_GREET }}"
-          sec=$(echo ${{ secrets.MY_SECRET }} | sed 's/./& /g')
-          echo "My secret is '$sec'."
-
+  
   Load-Test:
     runs-on: ubuntu-latest
     environment: Load-Test
